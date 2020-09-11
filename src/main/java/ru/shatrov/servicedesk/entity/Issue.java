@@ -12,7 +12,7 @@ import java.time.ZonedDateTime;
 public class Issue extends AbstractEntity {
 
     String number;
-    IssueStatus issueStatus = IssueStatus.NEW;
+    IssueStatus issueStatus = IssueStatus.CREATED;
     Client client;
     Equipment equipment;
     String descriptionIssue;

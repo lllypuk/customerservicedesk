@@ -13,5 +13,6 @@ public class Equipment extends AbstractEntity {
 
     String serialNumber;
     String nameEquipment;
+    Address address;
     List<Client> clients = new ArrayList<>();
 }

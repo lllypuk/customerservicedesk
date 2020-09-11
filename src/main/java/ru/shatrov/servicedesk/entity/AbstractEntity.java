@@ -11,5 +11,6 @@ public abstract class AbstractEntity {
 
     LocalDateTime createDateTime;
     LocalDateTime updateDateTime;
+    LocalDateTime deleteDateTime;
     List<History> histories = new ArrayList<>();
 }

@@ -1,7 +1,7 @@
 package ru.shatrov.servicedesk.enumeration;
 
 public enum IssueStatus {
-    NEW,
+    CREATED,
     ASSIGNED,
     IN_WORK,
     RESOLVE,
