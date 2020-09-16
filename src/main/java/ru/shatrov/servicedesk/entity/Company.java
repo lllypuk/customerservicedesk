@@ -8,6 +8,6 @@ import lombok.Data;
 @Data
 public class Company extends AbstractEntity {
 
-    String name;
-    String inn;
+    private String name;
+    private String inn;
 }

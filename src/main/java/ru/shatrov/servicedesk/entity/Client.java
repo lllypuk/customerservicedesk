@@ -11,7 +11,7 @@ import java.util.List;
 @Data
 public class Client extends Person {
 
-    Address address;
-    Company company;
-    List<Equipment> equipments = new ArrayList<>();
+    private Address address;
+    private Company company;
+    private List<Equipment> equipments = new ArrayList<>();
 }

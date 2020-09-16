@@ -5,6 +5,6 @@ import lombok.Data;
 @Data
 public class Person extends AbstractEntity {
 
-    String fullName;
-    String phoneNumber;
+    private String fullName;
+    private String phoneNumber;
 }

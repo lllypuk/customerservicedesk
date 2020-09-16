@@ -6,8 +6,8 @@ import ru.shatrov.servicedesk.enumeration.HistoryType;
 @Data
 public class History extends AbstractEntity {
 
-    User creator;
-    String comment;
-    HistoryType historyType;
-    AbstractEntity entity;
+    private User creator;
+    private String comment;
+    private HistoryType historyType;
+    private AbstractEntity entity;
 }

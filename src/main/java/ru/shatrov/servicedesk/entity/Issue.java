@@ -11,12 +11,12 @@ import java.time.ZonedDateTime;
 @Data
 public class Issue extends AbstractEntity {
 
-    String number;
-    IssueStatus issueStatus = IssueStatus.CREATED;
-    Client client;
-    Equipment equipment;
-    String descriptionIssue;
-    Person executor;
-    ZonedDateTime resolveDateTime;
-    String resolveComment;
+    private String number;
+    private IssueStatus issueStatus = IssueStatus.CREATED;
+    private Client client;
+    private Equipment equipment;
+    private String descriptionIssue;
+    private Person executor;
+    private ZonedDateTime resolveDateTime;
+    private String resolveComment;
 }

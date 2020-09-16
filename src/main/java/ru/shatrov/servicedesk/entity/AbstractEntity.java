@@ -5,12 +5,14 @@ import lombok.Data;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @Data
 public abstract class AbstractEntity {
 
-    LocalDateTime createDateTime;
-    LocalDateTime updateDateTime;
-    LocalDateTime deleteDateTime;
-    List<History> histories = new ArrayList<>();
+    private UUID id;
+    private LocalDateTime createDateTime;
+    private LocalDateTime updateDateTime;
+    private LocalDateTime deleteDateTime;
+    private List<History> histories = new ArrayList<>();
 }
