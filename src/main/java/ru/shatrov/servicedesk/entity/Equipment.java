@@ -1,6 +1,7 @@
 package ru.shatrov.servicedesk.entity;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.List;
  * Оборудование пользователя
  */
 @Data
+@EqualsAndHashCode(callSuper = true)
 public class Equipment extends AbstractEntity {
 
     private String serialNumber;
