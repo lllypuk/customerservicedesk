@@ -13,7 +13,7 @@ import org.springframework.http.ResponseEntity;
 import java.net.URL;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class HelloControllerIT {
+class HelloControllerIT {
 
     @LocalServerPort
     private int port;
@@ -29,7 +29,7 @@ public class HelloControllerIT {
     }
 
     @Test
-    public void getHello() throws Exception {
+    void getHello() {
         ResponseEntity<String> response = template.getForEntity(base.toString(),
                 String.class);
         assertThat(response.getBody()).isEqualTo("Greetings from Spring Boot!");
