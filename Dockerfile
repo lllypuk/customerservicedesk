@@ -1,4 +1,4 @@
-FROM gradle:jdk14
+FROM gradle:jdk15
 
 COPY --chown=gradle:gradle . /app
 WORKDIR /app
