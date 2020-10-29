@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import ru.shatrov.servicedesk.entity.AbstractEntity;
 import ru.shatrov.servicedesk.repository.CommonRepository;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -23,5 +25,12 @@ public abstract class AbstractService<E extends AbstractEntity, R extends Common
     @Override
     public Optional<E> save(E entity) {
         return Optional.of(repository.save(entity));
+    }
+
+    @Override
+    public List<E> findAll() {
+        List<E> result = new ArrayList<>();
+        repository.findAll().forEach(result::add);
+        return result;
     }
 }

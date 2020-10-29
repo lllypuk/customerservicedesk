@@ -1,8 +1,12 @@
 package ru.shatrov.servicedesk.controller;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import ru.shatrov.servicedesk.entity.AbstractEntity;
+
+import java.util.List;
 
 /**
  * Created on 29.10.2020.
@@ -11,5 +15,9 @@ import ru.shatrov.servicedesk.entity.AbstractEntity;
  */
 public interface CommonController<E extends AbstractEntity> {
 
+    @PostMapping("/save")
     ResponseEntity<E> save(@RequestBody E entity);
+
+    @GetMapping("/findAll")
+    List<E> findAll();
 }

@@ -1,7 +1,6 @@
 package ru.shatrov.servicedesk.service;
 
 import ru.shatrov.servicedesk.entity.AbstractEntity;
-import ru.shatrov.servicedesk.entity.Company;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,4 +13,6 @@ import java.util.Optional;
 public interface CommonService<E extends AbstractEntity> {
 
     Optional<E> save(E entity);
+
+    List<E> findAll();
 }

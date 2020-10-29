@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import ru.shatrov.servicedesk.entity.AbstractEntity;
 import ru.shatrov.servicedesk.service.CommonService;
 
+import java.util.List;
+
 /**
  * Created on 29.10.2020.
  *
@@ -23,5 +25,10 @@ public abstract class AbstractController<E extends AbstractEntity, S extends Com
     @Override
     public ResponseEntity<E> save(@RequestBody E entity) {
         return service.save(entity).map(ResponseEntity::ok).orElseThrow();
+    }
+
+    @Override
+    public List<E> findAll() {
+        return service.findAll();
     }
 }
