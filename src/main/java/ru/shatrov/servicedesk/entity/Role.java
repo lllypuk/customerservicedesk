@@ -6,12 +6,12 @@ import lombok.EqualsAndHashCode;
 import javax.persistence.Entity;
 
 /**
- * Адрес пользователя
+ * Роль пользователя
  */
-@Entity
 @Data
+@Entity
 @EqualsAndHashCode(callSuper = true)
-public class Address extends AbstractEntity {
+public class Role extends AbstractEntity {
 
-    private String fullAddress;
+    private String name;
 }
