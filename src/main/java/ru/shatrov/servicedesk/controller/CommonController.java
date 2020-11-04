@@ -1,5 +1,6 @@
 package ru.shatrov.servicedesk.controller;
 
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,7 +16,9 @@ import java.util.List;
  */
 public interface CommonController<E extends AbstractEntity> {
 
-    @PostMapping("/save")
+    @PostMapping(value = "/save",
+            consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE)
     ResponseEntity<E> save(@RequestBody E entity);
 
     @GetMapping("/findAll")

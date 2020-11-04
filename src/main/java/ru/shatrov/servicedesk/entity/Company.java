@@ -1,7 +1,6 @@
 package ru.shatrov.servicedesk.entity;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.*;
 
 import javax.persistence.Entity;
 
@@ -15,4 +14,13 @@ public class Company extends AbstractEntity {
 
     private String name;
     private String inn;
+
+    public Company(String name, String inn) {
+        this.name = name;
+        this.inn = inn;
+    }
+
+    public Company() {
+
+    }
 }

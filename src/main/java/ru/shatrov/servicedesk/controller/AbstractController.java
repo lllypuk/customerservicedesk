@@ -7,6 +7,7 @@ import ru.shatrov.servicedesk.entity.AbstractEntity;
 import ru.shatrov.servicedesk.service.CommonService;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Created on 29.10.2020.
@@ -24,7 +25,9 @@ public abstract class AbstractController<E extends AbstractEntity, S extends Com
 
     @Override
     public ResponseEntity<E> save(@RequestBody E entity) {
-        return service.save(entity).map(ResponseEntity::ok).orElseThrow();
+        Optional<E> result = service.save(entity);
+        return result.map(ResponseEntity::ok)
+                .orElseThrow();
     }
 
     @Override
