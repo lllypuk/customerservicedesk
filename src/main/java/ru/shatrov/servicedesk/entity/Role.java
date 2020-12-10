@@ -1,16 +1,15 @@
 package ru.shatrov.servicedesk.entity;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-
-import javax.persistence.Entity;
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  * Роль пользователя
  */
-@Data
-@Entity
-@EqualsAndHashCode(callSuper = true)
+@Document
+@Getter
+@Setter
 public class Role extends AbstractEntity {
 
     private String name;

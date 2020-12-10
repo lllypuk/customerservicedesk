@@ -1,26 +1,20 @@
 package ru.shatrov.servicedesk.entity;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.data.mongodb.core.mapping.Document;
 import ru.shatrov.servicedesk.enumeration.HistoryType;
-
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.ManyToOne;
 
 /**
  * История изменения сущностей
  */
-@Entity
-@Data
-@EqualsAndHashCode(callSuper = true)
+@Document
+@Getter
+@Setter
 public class History extends AbstractEntity {
 
-    @ManyToOne
     private User creator;
     private String comment;
 
-    @Enumerated(EnumType.ORDINAL)
     private HistoryType historyType;
 }

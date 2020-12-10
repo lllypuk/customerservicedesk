@@ -19,7 +19,7 @@ public abstract class AbstractController<E extends AbstractEntity, S extends Com
     protected final S service;
 
     @Autowired
-    public AbstractController(S service) {
+    protected AbstractController(S service) {
         this.service = service;
     }
 

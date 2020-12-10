@@ -1,16 +1,15 @@
 package ru.shatrov.servicedesk.entity;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-
-import javax.persistence.Entity;
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  * Персона
  */
-@Entity
-@Data
-@EqualsAndHashCode(callSuper = true)
+@Document
+@Getter
+@Setter
 public class Person extends AbstractEntity {
 
     private String fullName;

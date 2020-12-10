@@ -1,15 +1,16 @@
 package ru.shatrov.servicedesk.entity;
 
-import lombok.*;
 
-import javax.persistence.Entity;
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  * Компания
  */
-@Entity
-@Data
-@EqualsAndHashCode(callSuper = true)
+@Document
+@Getter
+@Setter
 public class Company extends AbstractEntity {
 
     private String name;
@@ -18,9 +19,5 @@ public class Company extends AbstractEntity {
     public Company(String name, String inn) {
         this.name = name;
         this.inn = inn;
-    }
-
-    public Company() {
-
     }
 }
