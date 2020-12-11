@@ -1,7 +1,7 @@
 package ru.shatrov.servicedesk.repository;
 
 import org.springframework.stereotype.Repository;
-import ru.shatrov.servicedesk.entity.History;
+import ru.shatrov.servicedesk.entity.Ticket;
 
 /**
  * Created on 29.10.2020.
@@ -9,5 +9,5 @@ import ru.shatrov.servicedesk.entity.History;
  * @author Shatrov Aleksandr
  */
 @Repository
-public interface HistoryRepository extends CommonRepository<History> {
+public interface TicketRepository extends CommonRepository<Ticket> {
 }

@@ -5,5 +5,7 @@ public enum TicketStatus {
     ASSIGNED,
     IN_WORK,
     RESOLVE,
-    DECLINE
+    DECLINE,
+    ON_SURVEY,
+    CLOSED
 }

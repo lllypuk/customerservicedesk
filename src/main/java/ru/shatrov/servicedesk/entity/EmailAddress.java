@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 
+import java.io.Serializable;
 import java.util.regex.Pattern;
 
 /**
@@ -17,7 +18,7 @@ import java.util.regex.Pattern;
  */
 @Getter
 @Setter
-public class EmailAddress {
+public class EmailAddress implements Serializable {
 
     private static final String EMAIL_REGEX = "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
     private static final Pattern PATTERN = Pattern.compile(EMAIL_REGEX);

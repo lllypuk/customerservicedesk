@@ -16,15 +16,23 @@ import java.time.LocalDateTime;
 public class Ticket extends AbstractDocument {
 
     private String number;
-
     private TicketStatus ticketStatus = TicketStatus.CREATED;
+    private Client client;
+    private String descriptionTicket;
 
-    private Customer customer;
-
-    private Equipment equipment;
-    private String descriptionIssue;
-
-    private Person executor;
+    private User executor;
     private LocalDateTime resolveDateTime;
     private String resolveComment;
+
+    public String getDescriptionTicket() {
+        return descriptionTicket;
+    }
+
+    public void setDescriptionTicket(String descriptionTicket) {
+        this.descriptionTicket = descriptionTicket;
+    }
+
+    public TicketStatus getTicketStatus() {
+        return ticketStatus;
+    }
 }

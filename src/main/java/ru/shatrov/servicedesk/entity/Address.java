@@ -4,12 +4,14 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.util.Assert;
 
+import java.io.Serializable;
+
 /**
  * Адрес пользователя
  */
 @Getter
 @Setter
-public class Address {
+public class Address implements Serializable {
 
     private final String houseNumber;
     private final String street;
@@ -24,9 +26,5 @@ public class Address {
         this.houseNumber = houseNumber;
         this.street = street;
         this.city = city;
-    }
-
-    public Address getCopy() {
-        return new Address(this.houseNumber, this.street, this.city);
     }
 }

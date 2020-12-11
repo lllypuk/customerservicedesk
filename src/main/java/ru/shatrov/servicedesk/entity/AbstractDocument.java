@@ -23,6 +23,10 @@ public abstract class AbstractDocument implements Serializable {
         return this.id;
     }
 
+    public LocalDateTime getCreateDateTime() {
+        return createDateTime;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
