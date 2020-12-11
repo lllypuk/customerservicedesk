@@ -11,7 +11,7 @@ import ru.shatrov.servicedesk.enumeration.HistoryType;
 @Document
 @Getter
 @Setter
-public class History extends AbstractEntity {
+public class History extends AbstractDocument {
 
     private User creator;
     private String comment;

@@ -13,12 +13,12 @@ import java.util.List;
 @Document
 @Getter
 @Setter
-public class Equipment extends AbstractEntity {
+public class Equipment extends AbstractDocument {
 
     private String serialNumber;
     private String nameEquipment;
 
     private Address address;
 
-    private List<Client> clients = new ArrayList<>();
+    private List<Customer> customers = new ArrayList<>();
 }

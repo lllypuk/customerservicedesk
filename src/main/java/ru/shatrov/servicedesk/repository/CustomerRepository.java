@@ -1,7 +1,7 @@
 package ru.shatrov.servicedesk.repository;
 
 import org.springframework.stereotype.Repository;
-import ru.shatrov.servicedesk.entity.Client;
+import ru.shatrov.servicedesk.entity.Customer;
 
 /**
  * Created on 29.10.2020.
@@ -9,5 +9,5 @@ import ru.shatrov.servicedesk.entity.Client;
  * @author Shatrov Aleksandr
  */
 @Repository
-public interface ClientRepository extends CommonRepository<Client> {
+public interface CustomerRepository extends CommonRepository<Customer> {
 }

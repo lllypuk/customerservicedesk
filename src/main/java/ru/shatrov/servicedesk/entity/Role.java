@@ -10,7 +10,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 @Getter
 @Setter
-public class Role extends AbstractEntity {
+public class Role extends AbstractDocument {
 
     private String name;
 }

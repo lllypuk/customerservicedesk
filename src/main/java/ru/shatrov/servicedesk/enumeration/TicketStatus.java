@@ -1,6 +1,6 @@
 package ru.shatrov.servicedesk.enumeration;
 
-public enum IssueStatus {
+public enum TicketStatus {
     CREATED,
     ASSIGNED,
     IN_WORK,

@@ -11,7 +11,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 @Getter
 @Setter
-public class Company extends AbstractEntity {
+public class Company extends AbstractDocument {
 
     private String name;
     private String inn;

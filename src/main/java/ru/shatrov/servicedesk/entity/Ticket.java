@@ -3,7 +3,7 @@ package ru.shatrov.servicedesk.entity;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.mongodb.core.mapping.Document;
-import ru.shatrov.servicedesk.enumeration.IssueStatus;
+import ru.shatrov.servicedesk.enumeration.TicketStatus;
 
 import java.time.LocalDateTime;
 
@@ -13,13 +13,13 @@ import java.time.LocalDateTime;
 @Document
 @Getter
 @Setter
-public class Issue extends AbstractEntity {
+public class Ticket extends AbstractDocument {
 
     private String number;
 
-    private IssueStatus issueStatus = IssueStatus.CREATED;
+    private TicketStatus ticketStatus = TicketStatus.CREATED;
 
-    private Client client;
+    private Customer customer;
 
     private Equipment equipment;
     private String descriptionIssue;
